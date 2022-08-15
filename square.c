@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
 		printf(HELPTEXT);
 		return -1;
 	}
-	char squareString[9] = {0}; //4,294,967,295 max value in uint32_t
+	char squareString[10] = {0}; //4,294,967,295 max value in uint32_t
 	sprintf(squareString, "%u", square);
 	
 	//check for 5 different digits
