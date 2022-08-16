@@ -12,7 +12,7 @@
 #include <math.h>
 #include <string.h>
 
-#define HELPTEXT "Usage: square NUMBER \n NUMER: must be between -65535 and 65535"
+#define HELPTEXT "Usage: square NUMBER \n NUMER: must be between -65535 and 65535\n"
 #define DIFFCHARNUMBER 5
 
 /*
@@ -27,10 +27,10 @@
 uint8_t countUniqueChar(char *number){
 	uint8_t ASCIIChars[10] = {0}; //0-9
 	uint8_t uniqueChars = 0;
-	for (int i = 0; i < strlen(number); i++){
+	for (uint8_t i = 0; i < strlen(number); i++){
 		ASCIIChars[number[i]-48] += 1; //0 has position 48 in ASCII table
 	}
-	for (int i = 0; i < 10; i++){
+	for (uint8_t i = 0; i < 10; i++){
 		if (ASCIIChars[i])
 			uniqueChars++;
 	}
